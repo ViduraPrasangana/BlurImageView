@@ -67,7 +67,7 @@ public class BlurImageView extends ImageView {
         this.defaultBitmapScale = bitmapScale;
     }
 
-    public void setBlur(int radius) {
+    public void setBlur(float radius) {
 
         if (imageOnView == null)
             imageOnView = getDrawable();
@@ -87,7 +87,7 @@ public class BlurImageView extends ImageView {
             Log.e("BLUR", "actualRadius invalid: " + radius);
     }
 
-    public Bitmap blurRenderScript(Bitmap smallBitmap, int radius) {
+    public Bitmap blurRenderScript(Bitmap smallBitmap, float radius) {
 
         int width  = Math.round(smallBitmap.getWidth() * defaultBitmapScale);
         int height = Math.round(smallBitmap.getHeight() * defaultBitmapScale);
